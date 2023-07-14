@@ -1,0 +1,62 @@
+.Post {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--cardColor);
+  border-radius: 1rem;
+  gap: 1rem;
+}
+
+.Post > img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.postReact {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+.postReact > div {
+  /* display: flex; */
+  text-align: center;
+}
+
+.postReact > div > div {
+  color: var(--gray);
+}
+
+.details {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.details > span:nth-child(2) {
+  text-align: start;
+}
+
+input.commentInput {
+  background-color: var(--inputColor);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  box-shadow: 3px 3px 6px #49d1ff;
+  color: white;
+  position: relative;
+  top: -1px;
+  transition: all 1s ease-in-out;
+  /* visibility: hidden; */
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

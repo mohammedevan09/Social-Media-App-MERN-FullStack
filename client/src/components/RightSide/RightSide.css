@@ -1,0 +1,46 @@
+.RightSide {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.navIcons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.navIcons > img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.navIcons > a,
+.navIcons > svg {
+  color: white;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.r-button {
+  height: 3rem;
+  width: 80%;
+  align-self: center;
+}
+
+.home_btn {
+  padding: 5px 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--buttonBg);
+  transition: all 100ms ease-out;
+}

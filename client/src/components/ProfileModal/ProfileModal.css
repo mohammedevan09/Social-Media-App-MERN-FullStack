@@ -1,0 +1,12 @@
+.mantine-Paper-root.mantine-Modal-modal.mantine-5rr5mu {
+  color: white;
+  background: black;
+}
+
+button.mantine-ActionIcon-hover.mantine-ActionIcon-root.mantine-Modal-close.mantine-1vhreye {
+  color: white;
+}
+
+button.mantine-ActionIcon-hover.mantine-ActionIcon-root.mantine-Modal-close.mantine-1vhreye:hover {
+  background-color: black;
+}

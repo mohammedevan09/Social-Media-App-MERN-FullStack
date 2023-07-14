@@ -1,0 +1,134 @@
+:root {
+  --newCyan: #00d9ff;
+  --yellow: #f5c32c;
+  --orange: #1f7ffc;
+  --black: white;
+  --gray: rgba(255, 255, 255, 0.65);
+  --profileShadow: 0px 4px 17px 2px rgba(0, 0, 0, 0.25);
+  --hrColor: #9bd1ff;
+  --cardColor: rgba(0, 0, 0, 0.54);
+  --buttonBg: linear-gradient(98.63deg, #49d1ff 0%, #00042a 100%);
+  --inputColor: rgba(40, 52, 62, 0.07);
+  --photo: #4cb256;
+  --video: #4a4eb7;
+  --location: #ef5757;
+  --schedule: #e1ae4a;
+}
+
+.App {
+  overflow: hidden;
+  color: var(--black);
+  background: #000000;
+  padding: 1rem 1rem;
+}
+
+/* blur */
+.blur {
+  position: absolute;
+  width: 22rem;
+  height: 14rem;
+  border-radius: 50%;
+  background: #49d1ff;
+  filter: blur(122px);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--buttonBg);
+  transition: all 100ms ease-out;
+}
+
+.button:hover {
+  color: var(--orange);
+  border: 2px solid var(--orange);
+  cursor: pointer;
+  background: transparent;
+  transition: all 1s ease-in-out;
+}
+
+.button:disabled {
+  background: silver;
+  pointer-events: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Form Styling */
+.infoForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.infoInput {
+  border: none;
+  outline: none;
+  background-color: var(--inputColor);
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+  color: white;
+}
+
+.infoForm > div {
+  display: flex;
+  gap: 1rem;
+  height: 2rem;
+  width: 90%;
+}
+
+.infoButton {
+  width: 6rem;
+  height: 2rem;
+  align-self: flex-end;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+}
+
+a {
+  text-decoration: none;
+}
+
+div.second-blur {
+  top: 36%;
+  left: -8rem;
+}
+@media screen and (max-width: 1100px) {
+  div.names {
+    display: grid;
+    gap: 0px;
+  }
+
+  div.worksAt {
+    margin-top: 50px;
+  }
+
+  div.locations {
+    display: grid;
+    gap: 0px;
+    margin: -22px 0 55px 0;
+  }
+
+  div.imageModal {
+    display: grid;
+  }
+  button.updateButton {
+    margin-top: 60px;
+  }
+  div.second-blur {
+    top: 61%;
+    left: -18rem;
+  }
+}
