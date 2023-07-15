@@ -60,3 +60,10 @@ input.commentInput {
   justify-content: space-between;
   align-items: center;
 }
+
+
+.relative {
+  position: absolute;
+  right: 26px;
+  width: 91px;
+}
