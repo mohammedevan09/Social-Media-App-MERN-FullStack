@@ -73,12 +73,13 @@ const User = ({ person }) => {
         </button>
       </div>
       {Object.keys(data).length !== 0 ? (
-        <div className="selectedUser">
+      <div className="selectedUser">
           <div>{data?.username}</div>
           <div className="line"></div>
-          <div>{data?.followers?.length}</div>
+          <div>Followers : {data?.followers?.length}</div>
           <div className="line"></div>
-          <div>{data?.following?.length}</div>
+          <div>Following : {data?.following?.length}</div>
+        </div>
         </div>
       ) : (
         ''
