@@ -64,8 +64,12 @@ const PostShare = () => {
         console.log(error)
       }
     }
-    dispatch(uploadPost(newPost))
-    reset()
+      if (desc.current.value) {
+      dispatch(uploadPost(newPost))
+      reset()
+    } else {
+      alert('Please enter a description')
+    }
   }
 
   const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER
