@@ -105,7 +105,7 @@ const PostShare = () => {
             onClick={handleSubmit}
             disabled={uploading}
           >
-            {uploading ? 'Uploading...' : 'Shaee'}
+            {uploading ? 'Uploading...' : 'Share'}
           </button>
 
           <div style={{ display: 'none' }}>
