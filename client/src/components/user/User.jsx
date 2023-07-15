@@ -74,7 +74,7 @@ const User = ({ person }) => {
       </div>
       {Object.keys(data).length !== 0 ? (
       <div className="selectedUser">
-          <div>{data?.username}</div>
+          <div>{data?.username?.substr(0,10)}</div>
           <div className="line"></div>
           <div>Followers : {data?.followers?.length}</div>
           <div className="line"></div>
