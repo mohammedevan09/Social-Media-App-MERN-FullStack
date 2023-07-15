@@ -7,6 +7,9 @@ const API = axios.create({ baseURL: baseUrl })
 
 export const getTimeLinePosts = (id) => API.get(`/posts/${id}/timeline`)
 
+export const deletingPost = (id, userId) =>
+  API.delete(`/posts/${id}`, { data: { userId } })
+
 export const likePost = (id, userId) =>
   API.put(`posts/${id}/like`, { userId: userId })
 
