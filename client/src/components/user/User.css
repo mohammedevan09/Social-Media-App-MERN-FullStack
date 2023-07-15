@@ -1,0 +1,14 @@
+.selectedUser {
+  display: flex;
+  justify-content: space-around;
+  background: grey;
+  padding: 20px;
+  align-items: center;
+}
+
+.line {
+  width: 2px;
+  color: white;
+  height: 21px;
+  background: white;
+}
