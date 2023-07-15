@@ -1,9 +1,10 @@
 .selectedUser {
   display: flex;
   justify-content: space-around;
-  background: grey;
+  background: #0a1e30;
   padding: 20px;
   align-items: center;
+  box-shadow: 5px 5px 5px #0073c5;
 }
 
 .line {
