@@ -1,6 +1,13 @@
+import React from 'react'
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import AuthReducer from './AuthReducer.jsx'
 import PostReducer from './PostReducer.jsx'
+import {
+  legacy_createStore as createStore,
+  applyMiddleware,
+  compose,
+} from 'redux'
+import thunk from 'redux-thunk'
 
 const reducers = combineReducers({
   AuthReducer,
@@ -14,13 +21,6 @@ const reducers = combineReducers({
 // })
 
 // export default store
-
-import {
-  legacy_createStore as createStore,
-  applyMiddleware,
-  compose,
-} from 'redux'
-import thunk from 'redux-thunk'
 
 function saveToLocalStorage(store) {
   try {
