@@ -12,9 +12,13 @@ const User = ({ person }) => {
   )
 
   const handleFollow = () => {
-    following
-      ? dispatch(unFollowUser(person._id, user._id))
-      : dispatch(followUser(person._id, user._id))
+     if (following) {
+      dispatch(unFollowUser(person._id, user._id))
+      alert('UnFollowed user')
+    } else {
+      dispatch(followUser(person._id, user._id))
+      alert('Followed user, Refresh to see timeline post')
+    }
 
     setFollowing((prev) => !prev)
   }
