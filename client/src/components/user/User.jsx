@@ -80,7 +80,6 @@ const User = ({ person }) => {
           <div className="line"></div>
           <div>Following : {data?.following?.length}</div>
         </div>
-        </div>
       ) : (
         ''
       )}
