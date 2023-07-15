@@ -1,18 +1,24 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import './Post.css'
-import { UilTrash } from '@iconscout/react-unicons'
+import { UilTrash, UilEllipsisV } from '@iconscout/react-unicons'
 import Comment from '../../img/comment.png'
 import Share from '../../img/share.png'
 import Heart from '../../img/like.png'
 import NotLike from '../../img/notlike.png'
 import { useDispatch, useSelector } from 'react-redux'
-import { deleteComment, likePost, commentPost } from '../../Api/PostRequest.jsx'
+import {
+  deleteComment,
+  likePost,
+  commentPost,
+  deletingPost,
+} from '../../Api/PostRequest.jsx'
 import {
   commentingPost,
   deletingPostComment,
 } from '../../Store/PostReducer.jsx'
 
 const Post = ({ data, id }) => {
+  const deletePostRef = useRef()
   const dispatch = useDispatch()
   const { user } = useSelector((state) => state.AuthReducer.authData)
 
@@ -25,6 +31,16 @@ const Post = ({ data, id }) => {
     setLiked((prev) => !prev)
     likePost(data._id, user._id)
     liked ? setLikes((prev) => prev - 1) : setLikes((prev) => prev + 1)
+  }
+
+  const handlePostRef = () => {
+    deletePostRef.current.style.display =
+      deletePostRef.current.style.display === 'none' ? 'block' : 'none'
+  }
+
+  const handlePostDelete = (id) => {
+    deletingPost(id, user._id)
+    alert('Post deleted! Refresh to see.')
   }
 
   const handleComment = (e) => {
@@ -103,13 +119,29 @@ const Post = ({ data, id }) => {
           </div>
         </div>
       )}
-      <div className="details">
-        <span>
-          <b>
-            <>{user?.username} </>
-          </b>
-        </span>
-        <span style={{ color: 'white' }}> {!data.image ? '' : data?.desc}</span>
+      <div className="details flex">
+        <div className="flex">
+          <b>{user?.username} &nbsp;</b>
+          <span style={{ color: 'white' }}>
+            {' '}
+            {!data.image ? '' : data?.desc}
+          </span>
+        </div>
+        <div
+          onClick={handlePostRef}
+          style={{ position: 'relative' }}
+          className="flex"
+        >
+          <span
+            onClick={() => handlePostDelete(data._id)}
+            ref={deletePostRef}
+            style={{ display: 'none' }}
+            className="relative button home_btn"
+          >
+            Delete post
+          </span>{' '}
+          {<UilEllipsisV />}
+        </div>
       </div>{' '}
       {data?.comments?.map((c, i) => {
         return (
@@ -138,3 +170,4 @@ const Post = ({ data, id }) => {
 }
 
 export default Post
+
