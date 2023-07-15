@@ -66,6 +66,7 @@ const PostShare = () => {
     }
       if (desc.current.value) {
       dispatch(uploadPost(newPost))
+      alert("Posted! Refresh to see.")
       reset()
     } else {
       alert('Please enter a description')
