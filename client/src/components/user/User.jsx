@@ -16,7 +16,7 @@ const User = ({ person }) => {
       setData({})
     }
   }
-  console.log(data)
+  // console.log(data)
 
   const dispatch = useDispatch()
 
